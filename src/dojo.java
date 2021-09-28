@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class dojo {
     public static void main(String[] args) {
         System.out.println("Frase aqui dentro");
@@ -9,6 +11,8 @@ public class dojo {
         System.out.println(nc); 
         double respostaMedia = media(5.0, 30.1, 40.5, 55.6);
         System.out.printf("A resposta da média é:%.2f ", respostaMedia);
+        String en = entrada("\n Digite algo: ");
+        System.out.println(en);
     }
 
     static double retornaMedia(int n1, int n2){
@@ -25,5 +29,12 @@ public class dojo {
         double resultado = soma/4;
         return resultado;
     } 
+    static String entrada(String mensagem){
+        Scanner scan = new Scanner(System.in);
+        System.out.println(mensagem);
+        String info = scan.nextLine();
+        scan.close();
+        return info;
+    }
 
 }
